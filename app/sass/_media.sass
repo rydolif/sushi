@@ -1,0 +1,139 @@
+
+@media only screen and (max-width : 1200px)
+
+	.header
+
+	.nav li
+		margin-right: 40px
+
+	.header__bottom_btn,
+	.header--active .header__bottom .header__bottom_btn, 
+	.header--menu .header__bottom .header__bottom_btn
+		margin-left: 23px
+
+
+@media only screen and (max-width : 992px)
+
+	.header
+		padding: 5px 0
+		position: fixed
+		left: 0
+		right: 0
+		width: 100%
+
+		&--active, &--menu
+			position: fixed
+
+		&__top
+			&_btn
+				display: inline-block
+				margin-right: 80px
+
+		&__phone 
+			a
+				&:hover~.header__phone_info
+					top: 37px
+
+			p:nth-child(1)
+				margin-bottom: 10px
+
+		&__links
+			display: none
+
+		&__bottom
+			padding: 0
+			position: fixed
+			display: block
+			border-radius: 0
+			box-shadow: none
+			width: 320px
+			height: 100%
+			flex-direction: column
+			right: -100%
+			z-index: -1
+			background: rgba(#f1f1f4, .95)
+			transition: all .3s
+
+			&_btn
+				display: none
+
+			ul
+				display: flex
+				flex-direction: column
+				justify-content: center
+				margin-top: 40px
+				margin-left: 40px
+				margin-bottom: 40px
+
+			li
+				margin: 0
+				margin-bottom: 10px
+			
+			&--active
+				right: 0
+				top: 0
+				margin-top: 52px
+				z-index: 3
+
+	.header__bottom--active
+		right: 0
+		z-index: 3
+
+	.hamburger
+		display: block
+
+@media only screen and (max-width : 767px)
+	.header
+		&__top
+			&_btn
+				display: none
+
+			&_cart-img
+				display: inline-block
+				border: none
+				background-color: transparent
+				cursor: pointer
+				margin-right: 75px
+
+		&__logo
+			a 
+				font-size: 24px
+
+		&__phone 
+			margin-left: 30px
+
+		&__phone a:hover~.header__phone_info
+			top: 33px
+
+		&__bottom--active
+			margin-top: 43px
+
+@media only screen and (max-width : 576px)
+	.header
+
+@media only screen and (max-width : 480px)
+	.header
+		padding: 8px 0
+
+		&__logo 
+			a
+				font-size: 20px
+
+		&__phone 
+			a, &_info
+				display: none
+
+
+
+			// img:hover~.header__phone_info
+			// 		top: 33px
+			// 		left: -165px
+
+
+
+
+
+
+
+
+

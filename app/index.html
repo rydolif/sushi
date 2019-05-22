@@ -30,8 +30,11 @@
 					</div>
 
 					<div class="header__phone">
-						<img src="img/phone.png" alt="ph">
-						<a href="tel:+74872574147">+7(4872)57-41-47</a>
+						
+						<a href="tel:+74872574147">
+							<img src="img/phone.png" alt="ph">
+							<span>+7(4872)57-41-47</span>
+						</a>
 
 						<div class="header__phone_info">
 							<p><b>Оформить заказ:</b></p>
@@ -39,14 +42,38 @@
 							<p>г. Тула, ул. Новомосковская, д. 25Б</p>
 						</div>
 					</div>
+					
+					<nav class="header__links">
+						<ul>
+							<li><a href="#">Меню</a></li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
 
-					<ul class="header__links">
-						<li><a href="#">Меню</a></li>
-						<li><a href="#">Доставка и оплата</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
+						<p class="header__links_green mobile"><b>Оформить заказ:</b></p>
+
+						<a href="tel:+74872574147" class="header__links_call mobile">+7 (4872) 57-41-47</a>
+						<p class="mobile">Прием звонков с 11:00 до 22:30</p>
+						<p class="mobile">г. Тула, ул. Новомосковская, д. 25Б</p>
+
+						<div class="header__links_soc mobile">
+							<p><b>Мы в соцсетях:</b></p>
+							<a href="#">
+								<img src="img/ins-footer.png" alt="">
+							</a>
+							<a href="#">
+								<img src="img/vk-footer.png" alt="">
+							</a>
+						</div>
+					</nav>
+
+					<a hre="#" class="header__basket mobile">
+						<img src="img/header-basket.png" alt="">
+						<span>10</span>
+					</a>
 
 					<button class="btn btn--cart header__top_btn">Корзина</button>
+
 					<button class="header__top_cart-img">
 						<img src="img/cart.png" alt="cart">
 					</button>
@@ -62,7 +89,7 @@
 		</div>
 	</header>
 	
-	<div class="nav">
+	<nav class="nav">
 		<div class="container nav__container">
 
 			<ul>
@@ -92,9 +119,9 @@
 				</li>
 			</ul>
 
-			<button class="btn btn--cart header__bottom_btn">Корзина</button>
+			<button class="btn btn--cart">Корзина</button>
 		</div>
-	</div>
+	</nav>
 
 	<main class="main">
 
@@ -106,51 +133,54 @@
 					<div class="container">
 						
 						<div class="hero__info">
-							<h1>Скидка</h1>
-							<p>на первый заказ</p>
-							<span>30%</span>
+							<div class="hero__info_text">
+								<h1>Скидка</h1>
+								<p>на первый заказ</p>
+							</div>
+							<p class="hero__info_action">30%</p>
 						</div>
 
 						<button class="btn hero__btn">Сделать заказ</button>
 
 					</div>
 				</div>
-
-				<div class="hero__item" style="background-image: url(img/bg-hero.jpg)">
-					<div class="container">
-						
-						<div class="hero__info">
-							<h1>Скидка</h1>
-							<p>на первый заказ</p>
-							<span>30%</span>
-						</div>
-
-						<button class="btn hero__btn">Сделать заказ</button>
-
-					</div>
-				</div>
-
-				<div class="hero__item" style="background-image: url(img/bg-hero.jpg)">
-					<div class="container">
-						
-						<div class="hero__info">
-							<h1>Скидка</h1>
-							<p>на первый заказ</p>
-							<span>30%</span>
-						</div>
-
-						<button class="btn hero__btn">Сделать заказ</button>
-
-					</div>
-				</div>
-
-			</div>
-
-			<div class="container">
 				
-				<div class="hero__slider_arrows"></div>
+				<div class="hero__item" style="background-image: url(img/bg-hero.jpg)">
+					<div class="container">
+						
+						<div class="hero__info">
+							<div class="hero__info_text">
+								<h1>Скидка</h1>
+								<p>на первый заказ</p>
+							</div>
+							<p class="hero__info_action">30%</p>
+						</div>
+
+						<button class="btn hero__btn">Сделать заказ</button>
+
+					</div>
+				</div>
+
+				<div class="hero__item" style="background-image: url(img/bg-hero.jpg)">
+					<div class="container">
+						
+						<div class="hero__info">
+							<div class="hero__info_text">
+								<h1>Скидка</h1>
+								<p>на первый заказ</p>
+							</div>
+							<p class="hero__info_action">30%</p>
+						</div>
+
+						<button class="btn hero__btn">Сделать заказ</button>
+
+					</div>
+				</div>
 
 			</div>
+
+			<div class="hero__slider_arrows container"></div>
+
 		</section>
 
 		<section class="gallery">
@@ -159,471 +189,354 @@
 				<div class="gallery__top">
 					<h3>Роллы</h3>
 					<div class="gallery__top_pages gallery__top_rolls">
-						<span>1</span> из <span>6</span>
+						<div class="swiper-button-prev swiper-button-prev1"></div>
+						<div class="swiper-pagination swiper-pagination1"></div>
+						<div class="swiper-button-next swiper-button-next1"></div>
 					</div>
 					<button class="btn btn--transparent">Показать все</button>
 				</div>
 
-				<div class="gallery__slider gallery__slider_rolls">
-					
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
+				<div class="gallery__slider gallery__slider1 swiper-container">
+					<div class="swiper-wrapper">
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-
 				</div>
 
 				<div class="gallery__top">
 					<h3>Суши</h3>
 					<div class="gallery__top_pages gallery__top_sushi">
-						<span>1</span> из <span>6</span>
+						<div class="swiper-button-prev swiper-button-prev2"></div>
+						<div class="swiper-pagination swiper-pagination2"></div>
+						<div class="swiper-button-next swiper-button-next2"></div>
 					</div>
 					<button class="btn btn--transparent">Показать все</button>
 				</div>
 
-				<div class="gallery__slider gallery__slider_sushi">
-					
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
+				<div class="gallery__slider gallery__slider2 swiper-container">
+					<div class="swiper-wrapper">
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-
 				</div>
 
 				<div class="gallery__top">
 					<h3>Сеты</h3>
 					<div class="gallery__top_pages gallery__top_sets">
-						<span>1</span> из <span>6</span>
+						<div class="swiper-button-prev swiper-button-prev3"></div>
+						<div class="swiper-pagination swiper-pagination3"></div>
+						<div class="swiper-button-next swiper-button-next3"></div>
 					</div>
 					<button class="btn btn--transparent">Показать все</button>
 				</div>
 
-				<div class="gallery__slider gallery__slider_sets">
-					
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
+				<div class="gallery__slider gallery__slider3 swiper-container">
+					<div class="swiper-wrapper">
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-
 				</div>
 
 				<div class="gallery__top">
 					<h3>WOK</h3>
 					<div class="gallery__top_pages gallery__top_wok">
-						<span>1</span> из <span>6</span>
+						<div class="swiper-button-prev swiper-button-prev4"></div>
+						<div class="swiper-pagination swiper-pagination4"></div>
+						<div class="swiper-button-next swiper-button-next4"></div>
 					</div>
 					<button class="btn btn--transparent">Показать все</button>
 				</div>
 
-				<div class="gallery__slider gallery__slider_wok">
-					
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
+				<div class="gallery__slider gallery__slider4 swiper-container">
+					<div class="swiper-wrapper">
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="gallery__slider_item swiper-slide">
+							<img src="img/gallery/1.png" alt="alt">
+							<div class="gallery__slider_info">
+								<h4>Запеченый мини <br>ролл с мидиями</h4>
+								<p>лосось, сыр сливочный, огурец, рис, нори</p>
 
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
+								<div class="gallery__slider_order">
+									<button class="btn">В корзину</button>
+									<span>9 240 P</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="gallery__slider_item">
-						<img src="img/gallery/1.png" alt="alt">
-						<div class="gallery__slider_info">
-							<h4>Запеченый мини <br>ролл с мидиями</h4>
-							<p>лосось, сыр сливочный, огурец, рис, нори</p>
-
-							<div class="gallery__slider_order">
-								<button class="btn">В корзину</button>
-								<span>9 240 P</span>
-							</div>
-						</div>
-					</div>
-
-
 				</div>
-
 			</div>
 		</section>
 
@@ -632,122 +545,123 @@
 				
 				<h3>Топпинги</h3>
 
-				<div class="addition__list">
-					
-					<div class="addition__item">
-						<img src="img/gallery/dop1.png" alt="alt">
-						<h4>Имбирь</h4>
+				<div class="addition__list addition__list_toping swiper-container">
+					<div class="swiper-wrapper">
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/dop1.png" alt="alt">
+							<h4>Имбирь</h4>
 
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>90 P</span>
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>90 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/dop1.png" alt="alt">
+							<h4>Имбирь</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>90 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/dop1.png" alt="alt">
+							<h4>Имбирь</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>90 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/dop1.png" alt="alt">
+							<h4>Имбирь</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>90 P</span>
+							</div>
 						</div>
 					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/dop1.png" alt="alt">
-						<h4>Имбирь</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>90 P</span>
-						</div>
-					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/dop1.png" alt="alt">
-						<h4>Имбирь</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>90 P</span>
-						</div>
-					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/dop1.png" alt="alt">
-						<h4>Имбирь</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>90 P</span>
-						</div>
-					</div>
-
 				</div>
 
 				<h3>Напитки</h3>
 
-				<div class="addition__list">
-					
-					<div class="addition__item">
-						<img src="img/gallery/water1.png" alt="alt">
-						<h4>Сок, 0.5 л</h4>
+				<div class="addition__list addition__list_drink swiper-container">
+					<div class="swiper-wrapper">
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/water1.png" alt="alt">
+							<h4>Сок, 0.5 л</h4>
 
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>30 P</span>
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>30 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/water2.png" alt="alt">
+							<h4>Сок, 0.5 л</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>30 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/water3.png" alt="alt">
+							<h4>Сок, 0.5 л</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>30 P</span>
+							</div>
+						</div>
+
+						<div class="addition__item swiper-slide">
+							<img src="img/gallery/water1.png" alt="alt">
+							<h4>Сок, 0.5 л</h4>
+
+							<div class="addition__order">
+								<button class="btn">В корзину</button>
+								<span>30 P</span>
+							</div>
 						</div>
 					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/water2.png" alt="alt">
-						<h4>Сок, 0.5 л</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>30 P</span>
-						</div>
-					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/water3.png" alt="alt">
-						<h4>Сок, 0.5 л</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>30 P</span>
-						</div>
-					</div>
-
-					<div class="addition__item">
-						<img src="img/gallery/water1.png" alt="alt">
-						<h4>Сок, 0.5 л</h4>
-
-						<div class="addition__order">
-							<button class="btn">В корзину</button>
-							<span>30 P</span>
-						</div>
-					</div>
-
 				</div>
 					
 			</div>
 		</section>
 
 		<section class="delivery">
-			<div class="container delivery__container">
+			<div class="container ">
+				<div class="delivery__container">
 
-				<div class="delivery__image">
-					<img src="img/bg-delivery.png" alt="alt">
+					<div class="delivery__image">
+						<img src="img/bg-delivery.png" alt="alt">
+					</div>
+					
+					<div class="delivery__info">
+						<h3>Доставка и оплата</h3>
+
+						<p>Доставка осуществляется по всему городу.</p>
+						<p>Стоимость доставки в отдельные районы - <b>150 рублей</b> <br>(подробности уточняйте у оперетора).</p>
+						<p>Заказать на сумму <b>500 рублей</b> и выше доставляется <b>бесплатно. </b><br>Вы можете оформить самовывоз по адресу: <br>г. Тула, ул. Новомосковская, д. 25Б</p>
+						<p>Оплатить покупки можно наличными курьеру при получении.</p>
+					</div>
 				</div>
-				
-				<div class="delivery__info">
-					<h3>Доставка и оплата</h3>
-
-					<p>Доставка осуществляется по всему городу.</p>
-					<p>Стоимость доставки в отдельные районы - <b>150 рублей</b> <br>(подробности уточняйте у оперетора).</p>
-					<p>Заказать на сумму <b>500 рублей</b> и выше доставляется <b>бесплатно. </b><br>Вы можете оформить самовывоз по адресу: <br>г. Тула, ул. Новомосковская, д. 25Б</p>
-					<p>Оплатить покупки можно наличными курьеру при получении.</p>
-				</div>
-
 			</div>
 		</section>
 
 		<section class="contacts">
-			<div id="map"></div>
+			<div id="map" class="map"></div>
 
-			<div class="container">
+			<div class="container contacts__container">
 				<h3>Контакты</h3>
 
 				<div class="contacts__place">
@@ -758,7 +672,7 @@
 				<div class="contacts__phone">
 					<img src="img/phone.png" alt="alt">
 					<a href="tel:+74872574147">+7(4872)57-41-47</a>
-					<p>Прием звонков: с <span>11:00 </span>до <span>22:30</span></p>
+					<p>Прием звонков: с <b>11:00 </b>до <b>22:30</b></p>
 				</div>
 
 				<div class="contacts__soc">

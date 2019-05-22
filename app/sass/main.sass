@@ -1,15 +1,17 @@
 @import "libs"
 @import "base"
 
+.mobile
+	display: none !important
+
+
 .header
 	background-color: #F1F1F4
 	padding: 40px 0 70px
+	transition: all .6s
 
-	&--active
-		.header__bottom
-			position: fixed
-			top: 0
-			width: 100%
+	&__dasket
+		display: none
 
 	&__container
 		position: relative
@@ -32,18 +34,23 @@
 			color: #FF4763
 
 	&__phone
+		display: flex
+		align-items: center
 		margin-left: 70px
 		margin-right: auto
 		position: relative
-		z-index: 5
+		z-index: 1001	
 
 		img
 			position: relative
 			vertical-align: inherit
 			z-index: 3
+			margin-right: 10px
+
 		a
 			color: $text
 			font-size: 24px
+			line-height: 1
 			font-weight: 700
 			vertical-align: bottom
 			position: relative
@@ -56,7 +63,7 @@
 
 		&_info
 			position: absolute
-			top: -45px
+			top: -48px
 			left: -30px
 			background: #fff
 			padding: 20px 30px
@@ -87,14 +94,13 @@
 
 			@extend .underline
 
-	
 
 .nav
 	position: fixed
 	top: 120px
 	right: 0
 	left: 0
-	z-index: 10
+	z-index: 999
 	transition: all .6s
 
 	&--active
@@ -132,18 +138,24 @@
 
 
 .hero
+	position: relative
+
 	&__btn
 		padding: 0 50px
 
-
 	&__item
-		padding: 120px 0
+		padding: 135px 0
 		background-size: cover
 		background-position: center
 		background-repeat: no-repeat
 
 	&__slider_arrows
-		position: relative
+		position: absolute
+		right: 0
+		left: 0
+		height: 1px
+		top: 50%
+		transform: translate(0, -50%)
 
 	.slick-prev,
 	.slick-next
@@ -154,7 +166,8 @@
 		background-color: #fff
 		font-size: 0
 		position: absolute
-		top: -240px
+		top: 50%
+		transform: translate(0, -50%)
 		cursor: pointer
 		transition: .3s
 
@@ -197,22 +210,23 @@
 
 	&__info
 		position: relative
-		padding-right: 100px
+		display: flex
 		color: #fff
-		width: 550px
-		margin-bottom: 50px
+		margin-bottom: 60px
 
-		h1
-			line-height: 1
-			text-transform: uppercase
+		&_text
+			width: auto
+			margin-right: 30px
 
-		p 
-			font-size: 34px
+			h1
+				line-height: 1
+				text-transform: uppercase
 
-		span
-			position: absolute
-			right: 0
-			top: 0
+			p 
+				font-size: 36px
+
+		&_action
+			float: left
 			font-size: 130px
 			font-weight: 700
 			line-height: .8
@@ -237,49 +251,25 @@
 			justify-content: space-between
 
 		span
-			margin: 0 5px
-
-	.slick-arrow
-		font-size: 0
-		width: 10px
-		height: 10px
-		padding: 0
-		border-color: transparent
-		border-top-color: #C4C4C4
-		border-right-color: #C4C4C4
-		background: none
-		cursor: pointer
-		&:hover
-			border-top-color: $accent
-			border-right-color: $accent
-		
-	.slick-prev
-		transform: rotate(-135deg)
-
-	.slick-next
-		transform: rotate(45deg)
-
+			margin: 0 7px
 
 	&__slider
 		margin-bottom: 50px
 
-		.slick-slide
-			padding: 0 10px
-
 		&_item
 			background: #424657
-			flex-basis: 23.5%
 			color: #fff
 			border-radius: 5px
 			overflow: hidden
 
+			img
+				display: block
+				margin: auto
+				width: 100%
+
 		&_info
 			padding: 20px 20px 30px
 
-		img
-			display: block
-			margin: auto
-			width: 100%
 
 		h4
 			line-height: 1.2
@@ -305,14 +295,10 @@
 		margin-bottom: 30px
 
 	&__list
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
 		margin-bottom: 70px	
 
 	&__item
 		background-color: #fff
-		flex-basis: 23%
 		padding: 15px 20px 40px
 		border-radius: 5px
 		transition: .5s
@@ -347,15 +333,25 @@
 	background: #424657
 
 	&__container
+		position: relative
 		display: flex
+		justify-content: flex-end
+		padding: 90px 0
+		z-index: 1
 
 	&__image
-		position: relative
+		position: absolute
+		top: 0
+		bottom: 0
+		height: 100%
 		left: -80px
+		z-index: -1
+
+		img
+			height: 100%
 
 	&__info
-		padding: 70px 0 45px
-		flex-basis: 40%
+		width: 40%
 		margin-left: auto
 		color: #fff
 
@@ -365,11 +361,15 @@
 	p 
 		margin-bottom: 20px
 		opacity: .8
+
+		&:last-child
+			margin-bottom: 0
  
 
 .contacts
 	position: relative
 	padding: 80px 0 65px
+
 
 	&__place,
 	&__phone
@@ -391,7 +391,7 @@
 				bottom: 2px
 
 	&__phone
-		span
+		b
 			color: $accent
 
 	&__soc
@@ -412,8 +412,8 @@
 		margin-bottom: 40px
 
 
-#map
-	height: 400px
+.map
+	height: 100%
 	position: absolute
 	left: 50%
 	top: 0

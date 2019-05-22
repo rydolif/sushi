@@ -3,62 +3,13 @@ $(function() {
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');
-    // $('nav').toggleClass('nav--active');
-    $('.header__bottom').toggleClass('header__bottom--active');
-    // $('header').toggleClass('header--menu');
+    $('.header__links').toggleClass('header__links--active');
+    $('.header').toggleClass('header--active');
   });
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
 
-//------------------------------------form-------------------------------------------
-  $('input[type="tel"]').mask('+0 (000) 000-00-00');
-
-  jQuery.validator.addMethod("phoneno", function(phone_number, element) {
-     return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
-  }, "Введите Ваш телефон");
-
-  $(".form").each(function(index, el) {
-    $(el).addClass('form-' + index);
-
-    $('.form-' + index).validate({
-      rules: {
-        phone: {
-          required: true,
-          phoneno: true
-        },
-        name: 'required',
-      },
-      messages: {
-        name: "Введите Ваше имя",
-        phone: "Введите Ваш телефон",
-      },
-      submitHandler: function(form) {
-        var t = {
-          name: jQuery('.form-' + index).find("input[name=name]").val(),
-          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
-          subject: jQuery('.form-' + index).find("input[name=subject]").val()
-        };
-        ajaxSend('.form-' + index, t);
-      }
-    });
-
-  });
-
-  function ajaxSend(formName, data) {
-    jQuery.ajax({
-      type: "POST",
-      url: "sendmail.php",
-      data: data,
-      success: function() {
-        $(".modal").popup("hide");
-        $("#thanks").popup("show");
-        setTimeout(function() {
-          $(formName).trigger('reset');
-        }, 2000);
-      }
-    });
-  }
 
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
@@ -85,162 +36,165 @@ $(function() {
   });
 
   
-  //---------------hero__slider-----------------
+//---------------hero__slider-----------------
 
   $('.hero__slider').slick({
     appendArrows: $('.hero__slider_arrows')
   });
 
-  //---------------gallery__slider_rolls-----------------
 
-  $('.gallery__slider_rolls').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    appendArrows: $('.gallery__top_rolls'),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
+//--------------------slider--------------------
+  var swiper = new Swiper('.gallery__slider1', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination1',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+    freeMode: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 4
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    }
   });
 
-  //---------------gallery__slider_sushi-----------------
-
-  $('.gallery__slider_sushi').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    appendArrows: $('.gallery__top_sushi'),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
+  var swiper = new Swiper('.gallery__slider2', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination2',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+    freeMode: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 4
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    }
   });
 
-  //---------------gallery__slider_sets-----------------
-
-  $('.gallery__slider_sets').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    appendArrows: $('.gallery__top_sets'),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
+  var swiper = new Swiper('.gallery__slider3', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination3',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+    freeMode: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 4
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    }
   });
 
-  //---------------gallery__slider_wok-----------------
-
-  $('.gallery__slider_wok').slick({
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    appendArrows: $('.gallery__top_wok'),
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
+  var swiper = new Swiper('.gallery__slider4', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination4',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next4',
+      prevEl: '.swiper-button-prev4',
+    },
+    freeMode: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 4
       },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10
       },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    }
+  });
+
+
+  var swiper = new Swiper('.addition__list_toping', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1200: {
+        slidesPerView: 3.5,
+        spaceBetween: 20
+      }
+    }
+  });
+
+  var swiper = new Swiper('.addition__list_drink', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    freeMode: true,
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 10
+      },
+      1200: {
+        slidesPerView: 3.5,
+        spaceBetween: 20
+      }
+    }
   });
 
 });

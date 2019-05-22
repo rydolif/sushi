@@ -39,7 +39,9 @@ $(function() {
 //---------------hero__slider-----------------
 
   $('.hero__slider').slick({
-    appendArrows: $('.hero__slider_arrows')
+    appendArrows: $('.hero__slider_arrows'),
+    autoplay: true,
+    autoplaySpeed: 4000,
   });
 
 

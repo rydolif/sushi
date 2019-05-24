@@ -54,6 +54,35 @@
 			br
 				display: none
 
+	// ---------- page-rolls ---------- 
+	.rolls
+		&__sort
+			align-items: flex-end
+
+		&__buttons
+			width: 75%
+
+			button
+				padding: 0 12px
+
+		&__selection
+			margin-bottom: 10px
+
+		&__item
+			flex-basis: 31%
+
+	// ---------- page-rolls_mussels ---------- 
+	.goods-block
+		&__image
+			img
+				width: 100%
+				
+		&__info
+			padding: 20px 45px
+
+			h3
+				font-size: 30px
+
 
 @media only screen and (max-width : 992px)
 	.hamburger
@@ -240,6 +269,57 @@
 		&__col:nth-child(1) a
 			margin-bottom: 10px
 
+	// ---------- page-rolls ---------- 
+	.rolls
+		padding: 90px 0 45px
+
+		&__buttons
+			flex-basis: 70%
+
+		button
+			height: 35px
+			line-height: 35px
+
+		&__item
+			flex-basis: 48%
+
+	// ---------- page-rolls_mussels ---------- 
+	.mussels
+		padding: 90px 0
+
+	.goods-block
+		&__image
+			img
+				width: 115%
+
+		&__info
+			padding: 20px 0 20px 55px
+
+			h3
+				font-size: 22px
+				margin-bottom: 15px
+
+			p:nth-of-type(1)
+				display: inline-block
+				margin-bottom: 15px
+
+			p:nth-last-of-type(1)
+				margin-bottom: 20px
+
+			span
+				display: inline-block
+
+			.btn
+				height: 35px
+				line-height: 35px
+
+	// ---------- page-fanta ---------- 
+	.fanta
+		padding: 90px 0
+
+	.modal
+		max-width: 650px
+
 
 @media only screen and (max-width : 767px)
 
@@ -380,6 +460,89 @@
 		&__col
 			width: 100%
 
+	// ---------- page-rolls ---------- 
+	.rolls
+		.breadcrumb
+			margin-bottom: 15px
+
+		&__buttons
+			flex-basis: 100%
+			margin-bottom: 35px
+
+		&__selection
+			margin-left: 0
+
+		&__item
+			&_order
+				flex-direction: column-reverse
+				align-items: flex-start
+
+
+	// ---------- page-rolls_mussels ---------- 
+	.goods-block
+		flex-direction: column
+		width: 90%
+		margin: auto
+
+		&__image
+			img
+				width: 100%
+
+		&__info
+			padding: 30px 50px
+
+	// ---------- page-fanta ---------- 
+	.fanta
+		padding: 90px 0
+
+	.goods-block--inverse .goods-block__image
+		padding: 20px 60px
+		margin-bottom: 20px
+
+	.modal
+		max-width: 420px
+		padding: 25px
+
+		h3
+			margin-bottom: 14px
+
+		.close
+			top: 35px
+			right: 25px
+
+			&.modal__order_close
+				right: 0
+				top: 20px
+
+		&__info
+			flex-direction: column
+			align-items: flex-start
+
+			p
+				margin-bottom: 10px
+
+		&__counter
+			margin-left: 0
+
+		&__order-sum
+			padding: 12px 0
+			margin-bottom: 12px
+
+	.counter__result
+		margin-left: 25px
+
+	.form
+		&__filds
+			flex-direction: column
+
+		&__wrap-input, 
+		&__wrap-textarea
+			width: 100%
+
+		&__wrap-input
+			div:last-child
+				margin-bottom: 20px
+
 
 @media only screen and (max-width : 480px)
 	.header__links
@@ -392,6 +555,9 @@
 
 		a
 			font-size: 12px
+
+	h5
+		font-size: 12px
 	
 	.gallery
 		padding-top: 25px
@@ -440,3 +606,87 @@
 
 		&__info
 			width: 100%
+
+	.map
+		height: 420px
+
+	// ---------- page-rolls ---------- 
+	.rolls
+		padding: 75px 0 10px
+
+		button
+			padding: 0 10px
+
+		&__item
+			&_info
+				padding: 10px
+				
+			p 
+				font-size: 12px
+
+			span
+				font-size: 18px
+
+	// ---------- page-rolls_mussels ---------- 
+	.mussels
+		padding: 75px 0 50px
+
+	.goods-block
+		&__image
+			img
+				width: 100%
+
+		&__info
+			padding: 20px 0 20px 20px
+
+			h3
+				font-size: 21px
+
+			.btn
+				padding: 0 20px
+
+	// ---------- page-fanta ---------- 
+	.fanta
+		padding: 75px 0
+
+	.goods-block--inverse .goods-block__info
+		padding: 0 20px
+
+	.goods-block__image img
+		width: 150%
+
+
+	.modal
+		padding: 25px 15px
+
+		&__image
+			overflow: hidden
+			width: 100px
+			border-radius: 5px
+
+		img
+			position: relative
+			left: -25px
+
+		&__counter
+			margin-right: 0
+
+		.close
+			font-size: 0
+			right: 15px
+
+	.form__wrap-textarea textarea
+		height: 100px
+
+	.form
+		&__order
+			flex-direction: column
+
+		div
+			.form__wrap-checkbox
+				font-size: 14px
+				width: 100%
+				margin-bottom: 10px
+
+			&:last-child
+				width: 100%

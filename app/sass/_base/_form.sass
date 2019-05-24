@@ -1,4 +1,77 @@
 .form
+	h4
+		margin-bottom: 10px
+
+	&__filds
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+
+	&__wrap-input,
+	&__wrap-textarea
+		width: 45%
+		display: inline-block
+
+		div
+			margin-bottom: 20px
+
+		input,
+		textarea
+			border-color: #EFEFF3
+			padding-left: 15px
+
+		input
+			height: 44px
+
+		textarea
+			height: 230px
+
+	&__order
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	div.form__wrap-checkbox
+		margin-bottom: 0
+
+		label
+			position: relative
+			padding-left: 25px
+			color: $text
+			cursor: pointer
+			margin-bottom: 0
+
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+
+			&::before
+				width: 15px
+				height: 15px
+				border-right: 3px
+				border: 1px solid $text
+
+			&::after
+				width: 9px
+				height: 9px
+				border-radius: 3px
+				border: 1px solid $text
+				background: $text
+				left: 3px
+				top: 3px
+				transition: .5s
+
+		input[type="checkbox"]
+			display: none
+
+		input[type="checkbox"]:checked + label::after
+			transform: scale(1)
+
+		input[type="checkbox"] + label::after
+			transform: scale(0)
+
 	label.error
 		position: absolute
 		bottom: -25px
@@ -24,6 +97,6 @@
 
 	div
 		position: relative
-		margin-bottom: 20px
+		// margin-bottom: 20px
 		&:last-child
 			margin-bottom: 0

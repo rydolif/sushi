@@ -40,7 +40,7 @@ $(function() {
 
   $('.hero__slider').slick({
     appendArrows: $('.hero__slider_arrows'),
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
   });
 
